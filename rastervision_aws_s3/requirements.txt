@@ -1,0 +1,5 @@
+rastervision_pipeline==0.20.3-dev
+boto3==1.26.157
+awscli==1.27.157
+tqdm==4.65.0
+
