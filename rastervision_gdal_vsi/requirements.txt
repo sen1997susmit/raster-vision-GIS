@@ -1,0 +1,2 @@
+rastervision_pipeline==0.20.3-dev
+gdal==3.6.3
