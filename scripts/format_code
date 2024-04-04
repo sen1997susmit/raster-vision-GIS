@@ -1,0 +1,43 @@
+#!/bin/bash
+
+set -e
+
+if [[ -n "${RASTER_VISION_DEBUG}" ]]; then
+    set -x
+fi
+
+SOURCE="${BASH_SOURCE[0]}"
+while [ -h "$SOURCE" ] ; do SOURCE="$(readlink "$SOURCE")"; done
+SCRIPTS_DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+SRC_DIR="$( cd -P "$( dirname "$SCRIPTS_DIR" )" && pwd )"
+
+function usage() {
+    echo -n \
+"Usage: $(basename "$0")
+Reformat Python code inline using yapf.
+"
+}
+
+if [ "${1:-}" = "--help" ]; then
+        usage
+else
+    echo "Ensuring single quote usage..."
+    UNIFY="unify --in-place --quote ' --recursive"
+    $UNIFY tests/* \
+          integration_tests/* \
+          docs/conf.py \
+          setup.py
+    find . -name '*.py' -print0 | xargs -0 $UNIFY
+
+    echo "Running yapf..."
+    yapf -ipr "$SRC_DIR" \
+        -e "*.git*" \
+        -e "*build*" \
+        -e "*cookiecutter_template*" \
+        -e "*tfod_utils*" \
+        -e "**/conf.py" \
+        -e "**/setup.py" \
+        -e "*.history*" \
+        -e "data/*" \
+        -e "**/*.ipynb"
+fi
