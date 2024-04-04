@@ -1,0 +1,14 @@
+data/
+build/
+
+.git/
+.github/
+.vscode/
+.history/
+
+**/__pycache__/
+**/.ipynb_checkpoints/
+**/*.pth
+
+**/build/
+**/dist/

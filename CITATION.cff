@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- name: "Azavea/Element 84, Robert Cheetham"
+  city: "Philadelphia, PA"
+title: "Raster Vision: An open source library and framework for deep learning on satellite and aerial imagery (2017-2023)."
+doi: 10.5281/zenodo.8018177
+url: "https://github.com/azavea/raster-vision"

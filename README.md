@@ -1,4 +1,3 @@
-# raster-vision-GIS
 ![Raster Vision Logo](docs/img/raster-vision-logo.png)
 &nbsp;
 
