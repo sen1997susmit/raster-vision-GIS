@@ -1,4 +1,4 @@
-![Raster Vision Logo](docs/img/raster-vision-logo.png)
+![Raster Vision Logo](docs1/img/raster-vision-logo.png)
 &nbsp;
 
 [![Pypi](https://img.shields.io/pypi/v/rastervision.svg)](https://pypi.org/project/rastervision/)
@@ -12,7 +12,7 @@ Raster Vision is an open source Python **library** and **framework** for buildin
 It has built-in support for chip classification, object detection, and semantic segmentation with backends using PyTorch.
 
 <div align="center">
-    <img src="docs/img/cv-tasks.png" alt="Examples of chip classification, object detection and semantic segmentation" width="60%">
+    <img src="docs1/img/cv-tasks.png" alt="Examples of chip classification, object detection and semantic segmentation" width="60%">
 </div>
 
 **As a library**, Raster Vision provides a full suite of utilities for dealing with all aspects of a geospatial deep learning workflow: reading geo-referenced data, training models, making predictions, and writing out predictions in geo-referenced formats.
